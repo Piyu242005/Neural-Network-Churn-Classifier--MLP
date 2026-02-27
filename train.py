@@ -1,6 +1,9 @@
 """
 Training Script for MLP Churn Classifier
 Implements training loop with Adam optimizer, learning rate scheduling, and cross-validation
+
+Author: Piyush Ramteke
+GitHub: github.com/Piyu242005/neural-network-churn
 """
 
 import torch

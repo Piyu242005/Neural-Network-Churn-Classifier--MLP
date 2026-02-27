@@ -1,6 +1,9 @@
 """
 Data Preprocessing Module for Customer Churn Prediction
 Handles data loading, feature engineering, and preprocessing
+
+Author: Piyush Ramteke
+GitHub: github.com/Piyu242005/neural-network-churn
 """
 
 import pandas as pd

@@ -1,6 +1,9 @@
 """
 MLP Classifier Model for Customer Churn Prediction
 Implements a Multilayer Perceptron with ReLU activation and dropout regularization
+
+Author: Piyush Ramteke
+GitHub: github.com/Piyu242005/neural-network-churn
 """
 
 import torch

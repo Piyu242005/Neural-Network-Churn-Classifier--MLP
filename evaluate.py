@@ -1,6 +1,9 @@
 """
 Model Evaluation and Visualization Script
 Comprehensive evaluation metrics and visualizations for the trained MLP classifier
+
+Author: Piyush Ramteke
+GitHub: github.com/Piyu242005/neural-network-churn
 """
 
 import torch

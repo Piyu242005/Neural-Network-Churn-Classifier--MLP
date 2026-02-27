@@ -1,6 +1,9 @@
 """
 Configuration file for MLP Churn Classifier
 Centralized hyperparameters and settings
+
+Author: Piyush Ramteke
+GitHub: github.com/Piyu242005/neural-network-churn
 """
 
 # Data Configuration

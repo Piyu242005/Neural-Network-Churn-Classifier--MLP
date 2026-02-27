@@ -263,7 +263,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👤 Author
 
-**Piyu**  
+**Piyush Ramteke**  
 - GitHub: [@Piyu242005](https://github.com/Piyu242005)
 - Project Link: [neural-network-churn](https://github.com/Piyu242005/neural-network-churn)
 
