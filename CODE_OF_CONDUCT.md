@@ -62,7 +62,7 @@ This Code of Conduct also applies to behavior outside of community spaces when s
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at:
 
-**📧 Email:** [your.email@example.com](mailto:your.email@example.com)  
+**📧 Email:** [piyu.143247@gmail.com](mailto:piyu.143247@gmail.com)  
 **🐙 GitHub:** [@Piyu242005](https://github.com/Piyu242005)
 
 All complaints will be reviewed and investigated promptly and fairly.
