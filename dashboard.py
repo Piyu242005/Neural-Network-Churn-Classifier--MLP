@@ -64,7 +64,7 @@ def load_model_and_data():
     """Load model and data (cached)"""
     try:
         # Load model
-        checkpoint = torch.load('mlp_churn_classifier.pth', map_location='cpu')
+        checkpoint = torch.load('mlp_churn_classifier_final.pth', map_location='cpu', weights_only=False)
         model = MLPClassifier(input_dim=16, hidden_dims=[128, 64, 32], dropout_rate=0.3)
         model.load_state_dict(checkpoint['model_state_dict'])
         model.eval()
@@ -102,7 +102,7 @@ def main():
     model, X_test, y_test, preprocessor = load_model_and_data()
     
     if model is None:
-        st.error("Failed to load model. Please ensure mlp_churn_classifier.pth exists.")
+        st.error("Failed to load model. Please ensure mlp_churn_classifier_final.pth exists.")
         return
     
     # Sidebar
