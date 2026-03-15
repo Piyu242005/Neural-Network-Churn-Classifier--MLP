@@ -117,6 +117,18 @@ Actual  Active      229        28      ← 89% correct
 
 ---
 
+## 🔄 Pipeline Workflow
+
+<div align="center">
+
+<img src="churn_prediction_workflow.svg" alt="Churn Prediction Pipeline Workflow" width="680"/>
+
+</div>
+
+> **Each stage is modular** — run independently via `python pipeline.py --mode train`, `--mode evaluate`, or `--mode all`.
+
+---
+
 ## 🏗️ Architecture
 
 <div align="center">
