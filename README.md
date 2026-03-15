@@ -273,7 +273,10 @@ churned = (
 
 ---
 
-## ⚡ Quick Start
+<details>
+<summary><h2 style="display:inline-block; margin-bottom:0">⚡ Quick Start</h2></summary>
+
+<br/>
 
 ### Prerequisites
 
@@ -316,9 +319,14 @@ streamlit run serving/dashboard.py
 docker-compose -f docker/docker-compose.yml up
 ```
 
+</details>
+
 ---
 
-## 🎮 Usage
+<details>
+<summary><h2 style="display:inline-block; margin-bottom:0">🎮 Usage</h2></summary>
+
+<br/>
 
 ### Method 1 — REST API
 
@@ -384,10 +392,12 @@ print(f"Prediction        : {'Churned' if prob >= 0.5 else 'Active'}")
 ### Method 3 — Full automation pipeline
 
 ```bash
-python pipeline.py --mode all      # Full pipeline
-python pipeline.py --mode train    # Training only
-python pipeline.py --mode evaluate # Evaluation only
+python -m src.pipeline --mode all      # Full pipeline
+python -m src.pipeline --mode train    # Training only
+python -m src.pipeline --mode evaluate # Evaluation only
 ```
+
+</details>
 
 ---
 
