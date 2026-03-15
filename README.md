@@ -40,6 +40,7 @@
 - [Overview](#-overview)
 - [Results](#-results)
 - [Architecture](#-architecture)
+- [Pipeline Workflow](#Pipeline-Workflow)
 - [Features](#-feature-engineering)
 - [Quick Start](#-quick-start)
 - [Usage](#-usage)
