@@ -326,131 +326,244 @@ st.sidebar.markdown("""
 
 @st.dialog("ℹ️ About This Project")
 def show_about_dialog():
-    st.markdown("""
-    <style>
-        [data-testid="stModal"] {
-            background: rgba(0, 0, 0, 0.6) !important;
-            backdrop-filter: blur(8px) !important;
-            -webkit-backdrop-filter: blur(8px) !important;
-            z-index: 999 !important;
-        }
-        [data-testid="stModal"] [data-testid="stDialog"] {
-            background: rgba(255, 255, 255, 0.05) !important;
-            backdrop-filter: blur(20px) !important;
-            -webkit-backdrop-filter: blur(20px) !important;
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
-            border-radius: 20px !important;
-            box-shadow: 
-                0 8px 32px rgba(0, 0, 0, 0.4),
-                0 0 0 1px rgba(0, 212, 255, 0.2),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
-            padding: 32px !important;
-            max-width: 480px !important;
-            position: relative !important;
-            overflow: hidden !important;
-        }
-        [data-testid="stModal"] [data-testid="stDialog"] h2 {
-            font-size: 1.3rem !important;
-            font-weight: 700 !important;
-            color: white !important;
-        }
-        [data-testid="stModal"] button[title="Close"], [data-testid="stModal"] button[aria-label="Close"] {
-            background: rgba(255, 255, 255, 0.1) !important;
-            border: 1px solid rgba(255, 255, 255, 0.2) !important;
-            border-radius: 50% !important;
-            width: 32px !important;
-            height: 32px !important;
-            color: white !important;
-            transition: all 0.2s ease !important;
-        }
-        [data-testid="stModal"] button[title="Close"]:hover, [data-testid="stModal"] button[aria-label="Close"]:hover {
-            background: rgba(255, 77, 79, 0.3) !important;
-            border-color: red !important;
-        }
-        .glass-link {
-            display: inline-flex;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 8px;
-            padding: 8px 14px;
-            margin: 4px 0;
-            width: 100%;
-            color: #00d4ff;
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: all 0.2s ease;
-            box-sizing: border-box;
-        }
-        .glass-link:hover {
-            background: rgba(0, 212, 255, 0.12);
-            border-color: rgba(0, 212, 255, 0.4);
-            transform: translateX(4px);
-        }
-    </style>
+    about_html = """
+    <div style="
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.4), 
+                    0 0 0 1px rgba(0,212,255,0.2);
+        padding: 32px;
+        position: relative;
+        overflow: hidden;
+    ">
+        
+        <div style="
+            position: absolute; top: -20px; left: -20px;
+            width: 120px; height: 120px;
+            background: rgba(0,212,255,0.15);
+            border-radius: 50%;
+            filter: blur(40px);
+            z-index: 0;
+        "></div>
+        <div style="
+            position: absolute; bottom: -15px; right: -15px;
+            width: 100px; height: 100px;
+            background: rgba(168,85,247,0.12);
+            border-radius: 50%;
+            filter: blur(35px);
+            z-index: 0;
+        "></div>
 
-    <div style="position: relative; z-index: 1;">
-        <!-- Glassmorphism Ambient Glow -->
-        <div style="width: 120px; height: 120px; background: rgba(0, 212, 255, 0.15); border-radius: 50%; filter: blur(40px); position: absolute; top: -20px; left: -20px; z-index: -1;"></div>
-        <div style="width: 100px; height: 100px; background: rgba(168, 85, 247, 0.12); border-radius: 50%; filter: blur(35px); position: absolute; bottom: -15px; right: -15px; z-index: -1;"></div>
+        
+        <div style="position: relative; z-index: 1;">
 
-        <!-- Project Title Section -->
-        <div style="background: rgba(0, 212, 255, 0.08); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 12px; padding: 16px; margin-bottom: 20px;">
-            <div style="font-size: 1rem; font-weight: 600; color: rgba(0, 212, 255, 0.9);">🧠 Churn Intelligence Platform</div>
-        </div>
+            
+            <div style="
+                background: rgba(0,212,255,0.08);
+                border: 1px solid rgba(0,212,255,0.2);
+                border-radius: 12px;
+                padding: 16px;
+                margin-bottom: 20px;
+            ">
+                <span style="
+                    font-size: 1rem;
+                    font-weight: 600;
+                    color: rgba(0,212,255,0.9);
+                ">🧠 Churn Intelligence Platform</span>
+            </div>
 
-        <!-- Developer Section -->
-        <div style="margin-bottom: 20px;">
-            <div style="font-size: 0.65rem; letter-spacing: 0.15rem; color: #00d4ff; font-weight: 700; margin-bottom: 10px;">👨‍💻 DEVELOPER</div>
-            <div style="display: flex; align-items: center;">
-                <div style="width: 52px; height: 52px; background: linear-gradient(135deg, #00d4ff, #0891b2); border-radius: 50%; border: 2px solid rgba(0, 212, 255, 0.4); box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); font-size: 1.1rem; font-weight: 800; color: white; display: flex; align-items: center; justify-content: center; margin-right: 14px;">PR</div>
+            
+            <div style="
+                font-size: 0.65rem;
+                letter-spacing: 0.15rem;
+                color: #00d4ff;
+                font-weight: 700;
+                margin-bottom: 10px;
+            ">👨‍💻 DEVELOPER</div>
+
+            
+            <div style="
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            ">
+                <div style="
+                    width: 52px; height: 52px;
+                    background: linear-gradient(135deg, #00d4ff, #0891b2);
+                    border-radius: 50%;
+                    border: 2px solid rgba(0,212,255,0.4);
+                    box-shadow: 0 0 20px rgba(0,212,255,0.3);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.1rem;
+                    font-weight: 800;
+                    color: white;
+                    margin-right: 14px;
+                    flex-shrink: 0;
+                ">PR</div>
                 <div>
-                    <div style="font-size: 1.1rem; font-weight: 700; color: white;">Piyush Ramteke</div>
-                    <div style="font-size: 0.8rem; color: rgba(156, 163, 175, 0.9);">Data Science & ML Engineer</div>
+                    <div style="
+                        font-size: 1.1rem;
+                        font-weight: 700;
+                        color: white;
+                    ">Piyush Ramteke</div>
+                    <div style="
+                        font-size: 0.8rem;
+                        color: rgba(156,163,175,0.9);
+                    ">Data Science & ML Engineer</div>
                 </div>
             </div>
-        </div>
 
-        <!-- Contact Links -->
-        <div style="margin-bottom: 20px;">
-            <a href="https://github.com/Piyu242005" target="_blank" rel="noopener noreferrer" class="glass-link">🔗 GitHub: @Piyu242005</a>
-            <a href="https://linkedin.com/in/piyush-ramteke" target="_blank" rel="noopener noreferrer" class="glass-link">💼 LinkedIn: piyush-ramteke</a>
-            <div class="glass-link" style="cursor: default;">📧 Email: Get in touch via LinkedIn!</div>
-        </div>
-
-        <!-- Divider -->
-        <div style="height: 1px; background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent); margin: 18px 0;"></div>
-
-        <!-- Tech Stack Section -->
-        <div style="margin-bottom: 20px;">
-            <div style="font-size: 0.75rem; color: #00d4ff; font-weight: 700; letter-spacing: 0.1rem; margin-bottom: 10px;">🛠️ Tech Stack</div>
-            <div>
-                <span style="background: rgba(0, 212, 255, 0.08); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 20px; padding: 4px 12px; font-size: 0.75rem; color: rgba(0, 212, 255, 0.85); display: inline-block; margin: 3px;">PyTorch</span>
-                <span style="background: rgba(0, 212, 255, 0.08); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 20px; padding: 4px 12px; font-size: 0.75rem; color: rgba(0, 212, 255, 0.85); display: inline-block; margin: 3px;">Flask</span>
-                <span style="background: rgba(0, 212, 255, 0.08); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 20px; padding: 4px 12px; font-size: 0.75rem; color: rgba(0, 212, 255, 0.85); display: inline-block; margin: 3px;">Streamlit</span>
-                <span style="background: rgba(0, 212, 255, 0.08); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 20px; padding: 4px 12px; font-size: 0.75rem; color: rgba(0, 212, 255, 0.85); display: inline-block; margin: 3px;">Scikit-learn</span>
-                <span style="background: rgba(0, 212, 255, 0.08); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 20px; padding: 4px 12px; font-size: 0.75rem; color: rgba(0, 212, 255, 0.85); display: inline-block; margin: 3px;">SHAP</span>
-                <span style="background: rgba(0, 212, 255, 0.08); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 20px; padding: 4px 12px; font-size: 0.75rem; color: rgba(0, 212, 255, 0.85); display: inline-block; margin: 3px;">Docker</span>
+            
+            <div style="margin-bottom: 20px;">
+                <a href="https://github.com/Piyu242005" 
+                   target="_blank"
+                   style="
+                    display: flex;
+                    align-items: center;
+                    background: rgba(255,255,255,0.06);
+                    border: 1px solid rgba(255,255,255,0.12);
+                    border-radius: 8px;
+                    padding: 8px 14px;
+                    margin-bottom: 8px;
+                    color: #00d4ff;
+                    text-decoration: none;
+                    font-size: 0.85rem;
+                ">🔗 GitHub: @Piyu242005</a>
+                <a href="https://linkedin.com/in/piyush-ramteke"
+                   target="_blank"
+                   style="
+                    display: flex;
+                    align-items: center;
+                    background: rgba(255,255,255,0.06);
+                    border: 1px solid rgba(255,255,255,0.12);
+                    border-radius: 8px;
+                    padding: 8px 14px;
+                    margin-bottom: 8px;
+                    color: #00d4ff;
+                    text-decoration: none;
+                    font-size: 0.85rem;
+                ">💼 LinkedIn: piyush-ramteke</a>
+                <div style="
+                    background: rgba(255,255,255,0.06);
+                    border: 1px solid rgba(255,255,255,0.12);
+                    border-radius: 8px;
+                    padding: 8px 14px;
+                    color: rgba(156,163,175,0.8);
+                    font-size: 0.85rem;
+                ">📧 Get in touch via LinkedIn!</div>
             </div>
-        </div>
 
-        <!-- Project Stats Section -->
-        <div style="margin-bottom: 20px;">
-            <div style="font-size: 0.75rem; color: #00d4ff; font-weight: 700; letter-spacing: 0.1rem; margin-bottom: 10px;">📊 Project Stats</div>
-            <div style="background: rgba(255, 255, 255, 0.03); border-radius: 8px; padding: 8px 12px; margin: 4px 0; border-left: 3px solid #00d4ff; font-size: 0.82rem; color: rgba(255, 255, 255, 0.85);">• 10,000 training samples</div>
-            <div style="background: rgba(255, 255, 255, 0.03); border-radius: 8px; padding: 8px 12px; margin: 4px 0; border-left: 3px solid #00d4ff; font-size: 0.82rem; color: rgba(255, 255, 255, 0.85);">• 89% model accuracy</div>
-            <div style="background: rgba(255, 255, 255, 0.03); border-radius: 8px; padding: 8px 12px; margin: 4px 0; border-left: 3px solid #00d4ff; font-size: 0.82rem; color: rgba(255, 255, 255, 0.85);">• 16 engineered features</div>
-            <div style="background: rgba(255, 255, 255, 0.03); border-radius: 8px; padding: 8px 12px; margin: 4px 0; border-left: 3px solid #00d4ff; font-size: 0.82rem; color: rgba(255, 255, 255, 0.85);">• 5 deployment methods</div>
-            <div style="background: rgba(255, 255, 255, 0.03); border-radius: 8px; padding: 8px 12px; margin: 4px 0; border-left: 3px solid #00d4ff; font-size: 0.82rem; color: rgba(255, 255, 255, 0.85);">• &lt;10ms inference time</div>
-        </div>
+            
+            <div style="
+                height: 1px;
+                background: linear-gradient(90deg, transparent, 
+                            rgba(0,212,255,0.3), transparent);
+                margin: 18px 0;
+            "></div>
 
-        <!-- Last Updated Row -->
-        <div style="background: rgba(255, 255, 255, 0.03); border-radius: 8px; padding: 10px 14px; display: flex; justify-content: space-between; font-size: 0.75rem; color: rgba(156, 163, 175, 0.7);">
-            <span>📅 March 2026 · MIT License</span>
-            <span>© Piyush Ramteke</span>
+            
+            <div style="margin-bottom: 16px;">
+                <div style="
+                    font-size: 0.75rem;
+                    color: #00d4ff;
+                    font-weight: 700;
+                    letter-spacing: 0.1rem;
+                    margin-bottom: 10px;
+                ">🛠️ TECH STACK</div>
+                <div>
+                    {tech_pills}
+                </div>
+            </div>
+
+            
+            <div style="
+                height: 1px;
+                background: linear-gradient(90deg, transparent,
+                            rgba(0,212,255,0.3), transparent);
+                margin: 18px 0;
+            "></div>
+
+            
+            <div style="margin-bottom: 16px;">
+                <div style="
+                    font-size: 0.75rem;
+                    color: #00d4ff;
+                    font-weight: 700;
+                    letter-spacing: 0.1rem;
+                    margin-bottom: 10px;
+                ">📊 PROJECT STATS</div>
+                {stat_rows}
+            </div>
+
+            
+            <div style="
+                background: rgba(255,255,255,0.03);
+                border-radius: 8px;
+                padding: 10px 14px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.75rem;
+                color: rgba(156,163,175,0.7);
+            ">
+                <span>📅 March 2026 · MIT License</span>
+                <span>© Piyush Ramteke</span>
+            </div>
+
         </div>
     </div>
-    """, unsafe_allow_html=True)
+    """
+
+    
+    techs = ["PyTorch", "Flask", "Streamlit", 
+             "Scikit-learn", "SHAP", "Docker"]
+    tech_pills = " ".join([
+        f'''<span style="
+            background: rgba(0,212,255,0.08);
+            border: 1px solid rgba(0,212,255,0.2);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            color: rgba(0,212,255,0.85);
+            display: inline-block;
+            margin: 3px;
+        ">{t}</span>'''
+        for t in techs
+    ])
+
+    
+    stats = [
+        "10,000 training samples",
+        "89% model accuracy",
+        "16 engineered features", 
+        "5 deployment methods",
+        "<10ms inference time"
+    ]
+    stat_rows = "".join([
+        f'''<div style="
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            padding: 8px 12px;
+            margin: 4px 0;
+            border-left: 3px solid #00d4ff;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.85);
+        ">• {s}</div>'''
+        for s in stats
+    ])
+
+    
+    about_html = about_html.format(
+        tech_pills=tech_pills,
+        stat_rows=stat_rows
+    )
+
+    clean_html = '\n'.join([line.strip() for line in about_html.split('\n')])
+    st.markdown(clean_html, unsafe_allow_html=True)
 
 colA, colB = st.columns([9, 1])
 with colB:
