@@ -32,6 +32,16 @@ This project goes beyond traditional machine learning by transforming raw predic
   <img src="Screenshot/customer_churn_system_workflow.svg" alt="System Workflow Diagram" width="80%">
 </div>
 
+```text
+Upload Data ➔ Predict Risk ➔ Analyze Reason ➔ Suggest Action ➔ Visual Dashboard
+```
+
+1. **Upload Dataset**: Securely upload real-time customer data via CSV.
+2. **Predict Probability**: The XGBoost model calculates a continuous churn probability (0–100%).
+3. **Segment Risk**: The system dynamically assigns actionable risk tiers (Low / Medium / High).
+4. **Uncover Reason**: SHAP explainability extracts the top contributing feature driving the individual's churn risk.
+5. **Take Action**: The business logic engine prescribes customized interventions directly to the support team.
+
 ---
 
 ## 🚀 Key Features

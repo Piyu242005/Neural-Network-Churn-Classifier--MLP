@@ -4,6 +4,11 @@ Here is a **simple and easy explanation** 👇
 
 # 🚀 How Your Churn System Works (Easy)
 
+<div align="center">
+  <img src="Screenshot\system_workflow.svg" width="100%" alt="System Workflow Diagram (SVG)">
+  <!-- If you prefer the PNG version, you can use: <img src="Screenshot/customer_churn_system_workflow.png" width="100%" alt="System Workflow Diagram (PNG)"> -->
+</div>
+
 ### 🧩 Step 1: Upload Data
 
 * User uploads customer data (CSV file)
