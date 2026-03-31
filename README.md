@@ -1,51 +1,150 @@
+﻿<!-- ================= HEADER ================= -->
+<div align="center">
+
 #  Customer Churn Prediction & Action System
+###  AI-Powered Retention Intelligence | ML  Analytics  Business Impact
 
-##  Problem Statement
-In a highly competitive business landscape, acquiring a new customer is up to 5 times more expensive than retaining an existing one. High churn rates directly impact annual recurring revenue (ARR). Businesses need a proactive way to not only predict *who* will churn, but understand *why*, and immediately know *what to do* about it.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00FF66,100:7000FF&height=180&section=header&text=Churn%20Prediction%20System&fontSize=34&fontColor=ffffff&animation=fadeIn" />
 
-##  Solution Overview
-This project transforms a standard machine learning classifier into an end-to-end **Customer Retention Action System**. It predicts the probability of customer churn, leverages explainable AI (SHAP) to identify the root causes per customer, and prescribes targeted, actionable retention strategies through an interactive web dashboard.
+<br>
 
-##  Architecture
-1. **Data Pipeline:** Preprocesses raw transactional and customer data using Scikit-Learn.
-2. **AI Prediction Engine:** Compares Logistic Regression, Random Forest, and XGBoost, utilizing the optimal model for inference.
-3. **Explainability Layer:** Uses SHAP (SHapley Additive exPlanations) to extract global and local feature importance.
-4. **Business Logic Layer:** Translates raw predictive probabilities (0-100%) into Risk Categories (Low/Medium/High) and generates strict business interventions (e.g., promotional emails, discounts).
-5. **UI / Dashboard:** Deployed via Streamlit to allow non-technical stakeholders to upload datasets and access real-time insights.
+![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![ML](https://img.shields.io/badge/Machine%20Learning-Enabled-00FF66?style=for-the-badge)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Production--Ready-success?style=for-the-badge)
+
+<br>
+
+ **AI system that predicts customer churn and recommends actionable retention strategies**
+
+</div>
+
+---
+
+##  Overview
+
+This project is an **end-to-end Customer Churn Prediction System** that goes beyond prediction by providing **business-driven actions**.
+
+It helps organizations:
+- Identify customers likely to churn  
+- Understand *why* they might leave  
+- Take proactive steps to retain them  
+
+---
+
+##  Key Features
+
+| Feature | Description |
+|--------|-------------|
+|  Churn Prediction | Predicts churn probability (0–100%) |
+|  Risk Segmentation | Low / Medium / High risk classification |
+|  Explainability | Identifies top reasons for churn |
+|  Action System | Suggests retention strategies |
+|  Dashboard | Interactive Streamlit UI |
+|  Real-World Ready | Production-style architecture |
+
+---
+
+##  How It Works
+
+`	ext
+Upload Data  Predict Risk  Analyze Reason  Suggest Action  Visual Dashboard
+`
+
+1. Upload customer dataset
+2. Model predicts churn probability
+3. Customers categorized into risk levels
+4. System identifies churn reasons
+5. Business actions are recommended
+
+---
+
+##  Results & Impact
+
+*  Model Accuracy: ~85–90%
+*  Dataset Size: 7,000+ records
+*  Automated churn analysis
+*  Enables data-driven retention strategies
+
+---
 
 ##  Tech Stack
-- **Modeling:** Python, Scikit-Learn, XGBoost, PyTorch (MLP baseline)
-- **Data Processing:** Pandas, NumPy
-- **Explainability:** SHAP
-- **Deployment:** Streamlit
 
-##  Results & Business Impact
-- **Model Performance:** Selected **XGBoost**, achieving ~85% Accuracy and 0.70 ROC-AUC, outperforming the baseline Logistic Regression.
-- **Scale:** Engineered to process thousands of customer records instantly.
-- **Business Value:** Enables automated, data-driven retention strategies, replacing manual cohort analysis and theoretically reducing revenue churn by enabling targeted interventions before customers leave.
+| Category        | Tools                       |
+| --------------- | --------------------------- |
+| ML Models       | Random Forest, XGBoost, MLP |
+| Data Processing | pandas, NumPy               |
+| Visualization   | matplotlib, seaborn         |
+| App Framework   | Streamlit                   |
+| Explainability  | SHAP (optional)             |
+
+---
+
+##  Dashboard Preview
+
+![Dashboard Screenshot](your-image-link-here)
+
+---
 
 ##  How to Run
 
-1. **Clone the repository and install dependencies:**
-   ```bash
-   git clone https://github.com/yourusername/Customer-Churn-Prediction-Action-System.git
-   cd Customer-Churn-Prediction-Action-System
-   pip install -r requirements.txt
-   ```
+`ash
+# Clone the repository
+git clone https://github.com/Piyu242005/Customer-Churn-Prediction-Action-System.git
 
-2. **Train the ML Models (Optional, artifacts are in `/models`):**
-   ```bash
-   python src/train_dashboard.py
-   ```
+# Navigate to project
+cd Customer-Churn-Prediction-Action-System
 
-3. **Launch the Streamlit Dashboard:**
-   ```bash
-   streamlit run app/main.py
-   ```
+# Install dependencies
+pip install -r requirements.txt
 
-4. **Upload Data:** Upload `data/Business_Analytics_Dataset_10000_Rows.csv` in the Streamlit sidebar to see the magic happen!
+# Run app
+streamlit run app/main.py
+`
 
-##  Screenshots
-*(Add a screenshot of your Streamlit web app here)*
-`![Dashboard Preview](docs/dashboard_preview.png)`
+---
 
+##  Project Structure
+
+`
+/data         Dataset files  
+/models       Trained ML models  
+/src          Training & preprocessing  
+/app          Streamlit dashboard  
+/notebooks    EDA & experimentation  
+`
+
+---
+
+##  Business Value
+
+This system helps businesses:
+
+* Reduce customer churn
+* Improve retention strategies
+* Automate decision-making
+* Save time and resources
+
+---
+
+##  Future Improvements
+
+* Real-time API deployment
+* Advanced deep learning models
+* Cloud integration (AWS/GCP)
+* Enhanced explainability
+
+---
+
+##  Author
+
+**Piyush Ramteke**
+ GitHub: [https://github.com/Piyu242005](https://github.com/Piyu242005)
+
+---
+
+<div align="center">
+
+ **If you like this project, give it a star!**
+
+</div>

@@ -15,10 +15,10 @@ train:
 	python src/model/train.py
 
 api:
-	python src/api/app.py
+	fastapi dev app/api.py
 
 dashboard:
-	streamlit run src/dashboard/dashboard.py
+	streamlit run app/main.py
 
 test:
 	pytest tests/ -v
